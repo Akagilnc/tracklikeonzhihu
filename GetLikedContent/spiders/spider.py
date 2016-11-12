@@ -17,7 +17,8 @@ class QuotesSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'https://www.zhihu.com/people/xiao-hui-30-76',
+            #'https://www.zhihu.com/people/xiao-hui-30-76',
+            'test.html',
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
@@ -25,8 +26,8 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         page = response.url.split("/")[-2]
 
-        html = (open('test.html', 'r')).read()
-        HtmlResponse.replace(html, response)
+        #html = (open('test.html', 'r')).read()
+
         titlelist = response.css('div.zm-profile-section-main a.post-link::text').extract()
         linklist = response.css('div.zm-profile-section-main a.post-link::attr(href)').extract()
         for title in response.css('div.zm-profile-section-main a.question_link::text').extract():
