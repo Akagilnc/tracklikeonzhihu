@@ -111,3 +111,5 @@ class Tools:
         file = open('test.html', 'wb')
         for result in resultlist:
             file.write(result[0] + '\n' + result[1].get('title') + '\n' + result[1].get('url') + '\n\n')
+
+        file.close()

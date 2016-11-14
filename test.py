@@ -6,7 +6,7 @@ linestemp = []
 for i in xrange(len(lines)):
     line = lines[i]
     if line.startswith('http'):
-        linestemp.append('<a href="' + line + '" style="text-decoration:none">' + line + '</a><br>\n')
+        linestemp.append('<a href="' + line + '" style="text-decoration:none" target="_blank">' + line + '</a><br>\n')
     elif line.startswith('\n'):
         linestemp.append('<br><br>\n\n')
     elif line.startswith('follow'):

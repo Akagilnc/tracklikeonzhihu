@@ -32,4 +32,4 @@ class GetInfoFromZhihu:
     tools.write_to_file(resultlist)
     # print result + '\n\n\n\n\n\n\n'
     # source_code = driver.page_source
-    # driver.close()
+    driver.close()
